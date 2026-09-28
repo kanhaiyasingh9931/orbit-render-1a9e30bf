@@ -1,0 +1,29 @@
+{
+  "name": "todo-fullstack",
+  "version": "1.0.0",
+  "description": "Simple Todo app with React/Vite frontend and Express/Lowdb backend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "vite",
+    "build": "vite build --base=./",
+    "start": "npm run build && node server/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "lowdb": "^6.0.1",
+    "cors": "^2.8.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0",
+    "prop-types": "latest"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  }
+}
